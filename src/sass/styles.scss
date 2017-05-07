@@ -1,0 +1,33 @@
+body {
+  background: url(http://dbwebworks.ie/sites/default/files/freecodecamp/images/rain-drop-1280x960.jpg) no-repeat center center fixed;
+  color: #FFF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+        font-family: 'Playfair Display', serif;
+      }
+#info{
+  border-radius: 25px;
+  margin-top: 50px;
+  background-color: #98AEBD;
+  opacity: 0.9;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+#weather {
+  text-transform:capitalize;
+}
+#temp {
+  font-size: 40px;
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+#title {
+  font-weight: 600;
+  font-size: 58px;
+}
