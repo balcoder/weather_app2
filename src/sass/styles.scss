@@ -22,12 +22,19 @@ body {
 #temp {
   font-size: 40px;
   font-weight: bold;
+  :hover {color: #114B5F;}
 }
 img {
   max-width: 100%;
   height: auto;
+  margin:auto;
 }
 #title {
   font-weight: 600;
   font-size: 58px;
+}
+
+#icon img {
+  width: 110px;
+  height: 110px;
 }
