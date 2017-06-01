@@ -34,11 +34,18 @@ function getWeather(latitude, longitude) {
   xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=metric&APPID=a97ac8512b855c7a557f17fa8b10d4da", true);
   xmlhttp.send();
 }
-// Change Temp from Celsius to Fahrenheit and back
-$(document).ready(function() {
-  document.getElementById("temp").onclick = function() {
-    changeTemp()
-  };
+// Change Temp from Celsius to Fahrenheit and back using onclick
+//$(document).ready(function() {
+document.addEventListener('DOMContentLoaded',function(){
+  // document.getElementById("temp").onclick = function() {
+  //   changeTemp()
+  // };
+
+  // Change Temp from Celsius to Fahrenheit and back using addEventListener
+
+  var tempClick = document.getElementById("temp");
+  tempClick.addEventListener("click", function(){ changeTemp()});
+
 
   function changeTemp() {
     if (document.getElementById("temp").getElementsByTagName("sup")[0].id == "fahrenheit") {
@@ -48,20 +55,21 @@ $(document).ready(function() {
     } else {
       var myFahrenheit = toFahrenheit(parseInt(document.getElementById("temp").childNodes[0].textContent));
       document.getElementById("temp").innerHTML = myFahrenheit + "<sup id='fahrenheit'> \u2109</sup>";
-
-
     }
     return;
   }
 
+
   function toCelsius(fahrenheit) {
     var result = (5 / 9) * (fahrenheit - 32);
-    return result.toPrecision(3);
+    //return result.toPrecision(3);
+    return result.toFixed(0);
   }
 
   function toFahrenheit(celsius) {
     var result = ((9 / 5 * celsius)  + 32);
-    return result.toPrecision(3);
+    //return result.toPrecision(3);
+    return result.toFixed(0);
   }
 
-});
+})
