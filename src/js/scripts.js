@@ -7,7 +7,7 @@ xmlhttpip.onreadystatechange = function() {
     latitude = myObj.loc.split(",")[0];
     longitude = myObj.loc.split(",")[1];
     document.getElementById("lat").innerHTML = "Latitude: " + myObj.loc.split(",")[0];
-    document.getElementById("long").innerHTML = "Longitude: " + myObj.loc.split(",")[1];
+    document.getElementById("long").innerHTML = "Longitude: " + myObj.loc.split(",")[1];    
     //get weather info
     getWeather(latitude, longitude);
   }
